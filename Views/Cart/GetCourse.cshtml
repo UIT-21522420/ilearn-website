@@ -1,0 +1,245 @@
+﻿@using ILEARN.Models
+@model ILEARN.Models.Course
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Chi tiết khóa học";
+}
+
+<div id="intro-banner" class="minimal-border-full">
+    <div style="height: 68px"> </div>
+    <div class="container-fluid p-0 minimal-border-banner">
+        <div class="info-khoahoc">
+            <span class="d-block pd-2 pb-2"><a class="link-text" style="color: #333333 !important" href="@Url.Action("Index","Course")">Khóa học</a> >> <span class="link-text" style="color: #333333 !important">@Model.CourseName</span></span>
+            <span class="d-block pd-2 pb-2 text-uppercase font-weight-bolder" style="font-size: 36px">@Model.CourseName</span>
+            <img src="~/images/@Common.GetLecturerFromID(Model).Img" alt="" title="@Common.GetLecturerFromID(Model).LecturerName" class="rounded-circle img-lecturer-theme mr-1"/> 
+            <a href="@Url.Action("Index","Lecturer", new { ID = Model.LecturerId })">
+                <span class="d-inline-block pd-2">@Common.GetLecturerFromID(Model).LecturerName</span>
+            </a>
+            <div class="rating_course rate_star_replace d-inline-block star_change ml-3">
+                <i class="fas fa-fw fa-star"></i>
+                <i class="fas fa-fw fa-star"></i>
+                <i class="fas fa-fw fa-star"></i>
+                <i class="fas fa-fw fa-star"></i>
+                <i class="fas fa-fw fa-star"></i>
+            </div>
+        </div>
+    </div>
+    <div class="content-section pb-5" style="background: #F5F5F5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 pt-4">
+                    <div class="tab-detail">
+                        <ul class="tab-detail-li">
+                            <li><a href="#intro">Giới thiệu</a></li>
+                            <li><a href="#description">Nội dung</a></li>
+                            <li><a href="">Khóa học liên quan</a></li>
+                            <li><a href="#lecturer">Giảng viên</a></li>
+                            <li><a href="#vote">Đánh giá</a></li>
+                        </ul>
+                    </div>
+                    <div class="box-content" >
+                        <h2 id="intro" class="mb-4">Bạn sẽ học được gì</h2>
+                        <p class="pre-line">@Model.Introduction</p>
+                    </div>
+                    <div class="box-content">
+                        <h2 id="description" class="mb-4">Giới thiệu khóa học</h2>
+                        <p class="pre-line">@Model.Description</p>
+                    </div>
+                    <div class="box-content">
+                        <h2 id="lecturer" class="mb-4">Nội dung khóa học</h2>
+                    </div>
+                    <div class="box-content">
+                        <h2 class="mb-4">Thông tin giảng viên</h2>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-4">
+                                <div class="giangvien-img">
+                                    <a href="@Url.Action("Index","Lecturer", new { ID = Model.LecturerId })">
+                                        <img src="~/images/@Common.GetLecturerFromID(Model).Img" class="rounded-circle minimal-border" alt="" title="@Common.GetLecturerFromID(Model).LecturerName">
+                                    </a>
+                                </div>
+                                <div class="giangvien-thongke"></div>
+                            </div>
+                            <div class="col-lg-8 col-md-6 col-sm-8">
+                                <a class="giangvien-name" href="@Url.Action("Index","Lecturer", new { ID = Model.LecturerId })">
+                                    <p style="color: deepskyblue; font-size: 20px ; font-weight: bolder">@Common.GetLecturerFromID(Model).LecturerName</p>
+                                </a> 
+                                <div class="giangvien-chuthich">
+                                    <p class="pre-line">@Common.GetLecturerFromID(Model).Description</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <h2 id="vote" class="mb-4"><i class="fa fa-star"></i>Học viên đánh giá</h2>
+                        <div class="row">
+                            <div class="col-3 rating-student-left">
+                                <div class="number-big-rate">0</div>
+                                <div class="star-big-rate">
+                                    <i class="fa fa-fw fa-star-o"></i>
+                                    <i class="fa fa-fw fa-star-o"></i>
+                                    <i class="fa fa-fw fa-star-o"></i>
+                                    <i class="fa fa-fw fa-star-o"></i>
+                                    <i class="fa fa-fw fa-star-o"></i>
+                                </div>
+                                <div class="count-review text-center">0 đánh giá</div>
+                            </div>
+                            <div class="col-9 rating-student-right">
+                                <div class="col-md-12 col-12 col-sm-12 u-rate-f1-progress">
+                                    <div class="d-inline-block w-100">
+                                        <div class="progress progress_rate_star">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                            </div>
+                                        </div>
+                                        <div class="u-rate-f1-star">
+                                            <span class="star-rate-5 float-left" title="gorgeous">
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                            </span>
+                                            <span class="float-right">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-block w-100">
+                                        <div class="progress progress_rate_star">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                            </div>
+                                        </div>
+                                        <div class="u-rate-f1-star">
+                                            <span class="star-rate-5 float-left" title="gorgeous">
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                            </span>
+                                            <span class="float-right">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-block w-100">
+                                        <div class="progress progress_rate_star">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                            </div>
+                                        </div>
+                                        <div class="u-rate-f1-star">
+                                            <span class="star-rate-5 float-left" title="gorgeous">
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                            </span>
+                                            <span class="float-right">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-block w-100">
+                                        <div class="progress progress_rate_star">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                            </div>
+                                        </div>
+                                        <div class="u-rate-f1-star">
+                                            <span class="star-rate-5 float-left" title="gorgeous">
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                            </span>
+                                            <span class="float-right">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-block w-100">
+                                        <div class="progress progress_rate_star">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                            </div>
+                                        </div>
+                                        <div class="u-rate-f1-star">
+                                            <span class="star-rate-5 float-left" title="gorgeous">
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                                <i class="fa fa-fw fa-star-o"></i>
+                                            </span>
+                                            <span class="float-right">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="box-reg-khoahoc minimal-border-full">
+                        <div class="course-detail-img minimal-border-bottom">
+                            <img src="~/images/@Model.Img" alt="" style="width: 100%;">
+                        </div>
+                        <div class="info-course-detail">
+                            <div class="price-box-theme">
+                                <strong>@String.Format("{0: #,##0đ}", @Model.DiscountPrice)</strong>
+                                <del>@String.Format("{0: #,##0đ}", @Model.CoursePrice)</del>
+                                <span class="discount-price">-61%</span>
+                            </div>
+                            <a href="" title="Đăng ký học" class="reg-now minimal-border-full hover-red" id="btn-register-retail" data-add-type="one"><span>Đăng ký học</span></a>
+                            @if (User.Identity.IsAuthenticated )
+                            { 
+                                var accountid = int.Parse(User.FindFirst("id").Value);
+                                <a href="@Url.Action("AddToCart","Cart",new { courseID = Model.Id, accountID = accountid })" title="Thêm vào giỏ hàng" class="reg-now add-cart minimal-border-full">
+                                    <span>
+                                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng
+                                    </span>
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("Signin","Authentication")" title="Thêm vào giỏ hàng" class="reg-now add-cart minimal-border-full">
+                                    <span>
+                                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng
+                                    </span>
+                                </a>
+                            }
+                            <div class="thongke-box-reg">
+                                <div class="tg">
+                                    <i class="fa fa-clock-o"></i> Thời lượng:
+                                    <strong>0 phút</strong>
+                                </div>
+                                <div class="gt">
+                                    <i class="fa fa-play-circle"></i>
+                                    Giáo trình:
+                                    <strong>@Model.NumberOfLectures Bài học</strong>
+                                </div>
+                                <div class="gt study_all_the_time">
+                                    <i class="fas fa-globe"></i> Học mọi lúc mọi nơi
+                                </div>
+                                <div class="gt">
+                                    <i class="fa fa-compass"></i> Học trên mọi thiết bị: Mobile, TV, PC
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    function addToCart(courseId) {
+        $.ajax({
+            type: 'POST',
+            url: '/Cart/AddToCart',
+            contentType: 'application/json',
+            data: JSON.stringify({ courseID: courseId }),
+            success: function (response) {
+                console.log('Course added to cart.');
+                console.log(courseId);
+            },
+            error: function (error) {
+                console.error('Error: ', error);
+            }
+        });
+    }
+</script>

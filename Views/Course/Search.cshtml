@@ -1,0 +1,90 @@
+﻿@using ILEARN.Models
+@model List<ILEARN.Models.Course>
+
+@{
+    ViewData["Title"] = "Tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="course-content minimal-border-full pb-5">
+    <div class="container">
+        <div style="height: 90px"> </div>
+        <div class="show-all-course d-inline-block mt-2 mb-2 row align-center">
+            <div class="pt-2 pb-2">
+                <span style="font-size: 20px">Tìm thấy <span>@TempData["count"]</span> khóa học với từ khóa "<span>@TempData["value"]</span>"</span>
+            </div>
+            <button type="button" class="button-style ml-15px all-course" onclick="BackToIndex()">Tất cả khóa học</button>
+            <div class="d-inline-block float-right filter-section minimal-border-full mr-10px-n">
+                <span class="order-new-ceo filter">
+                    <i class="fas fa-sort"></i>
+                    Sắp xếp
+                </span>
+                <ul class="navbar-nav d-inline-block">
+                    <li class="nav-item d-inline">
+                        <a class="sort-by-price-low" href=@Url.Action("PriceIncreased","Course")>Giá tăng dần</a>
+                    </li>
+                    <li class="nav-item d-inline">
+                        <a class="sort-by-price-high" href=@Url.Action("PriceDecreased","Course")>Giá giảm dần</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                @{
+                    foreach (Course j in Model)
+                    {
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
+                            <div class="course-item">
+                                <a href="@Url.Action("GetCourse","Course",new {ID = j.Id})">
+                                    <div class="course-item-image minimal-border-bottom">
+                                        <img src="~/images/@j.Img" alt="" />
+                                    </div>
+                                </a>
+                                <div class="course-item-detail">
+                                    <h3 class="title" style="min-height: unset">
+                                        <a href="@Url.Action("GetCourse","Course",new {ID = j.Id})">
+                                            <span class="ellipsis-2 course-name ml-3 mt-3 mr-3" style="height: 42px">@j.CourseName</span>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12 pr-0">
+                                        <div class="ellipsis-1 ml-3 mb-2">
+                                            <span>
+                                                @Common.GetLecturerNameFromCourse(j)
+                                            </span>
+                                        </div>
+                                        <div class="rating_course rate_star_replace pull-left star_change ml-3">
+                                            <i class="fa fa-fw fa-star"></i>
+                                            <i class="fa fa-fw fa-star"></i>
+                                            <i class="fa fa-fw fa-star"></i>
+                                            <i class="fa fa-fw fa-star"></i>
+                                            <i class="fa fa-fw fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pl-0">
+                                        <div class="clearfix text-right">
+                                            <div class="price-col mr-2">
+                                                <strike><span id="formatted-price">@String.Format("{0: #,##0 đ}", j.CoursePrice)</span></strike>
+                                                <br>
+                                                <strong style="font-size: 22px"><span id="formatted-price">@String.Format("{0: #,##0 đ}", j.DiscountPrice)</span></strong>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function BackToIndex() {
+        window.location.href = '@Url.Action("Index", "Course")';
+    }
+</script>

@@ -1,0 +1,79 @@
+﻿@model List<ILEARN.Models.Course>
+
+@{
+    ViewData["Title"] = "Course";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div id="page-wrapper">
+    <div class="container-flush">
+        <h2 class="page-header">Danh sách khóa học</h2>
+        <div class="row">
+            <div class="col-md-12 offset-2">
+                <table class="table table-bordered" id="dataTabledata" style="font-size: 12px">
+                    <thead>
+                        <tr class="text-center">
+                            <th>STT</th>
+                            <th>Tên khóa học</th>
+                            <th>Tên giảng viên</th>
+                            <th>Số lượng bài giảng</th>
+                            <th>Giá</th>
+                            <th>Giá giảm giá</th>
+                            <th>Giảm giá</th>
+                            <th>Thể loại</th>
+                            <th>Giới thiệu</th>
+                            <th>Chú thích</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int i = 1;
+                        }
+                        @foreach (var course in Model)
+                        {
+                            <tr>
+                                <td>@i</td>
+                                <td>@course.CourseName</td>
+                                <td>@course.Lecturer.LecturerName</td>
+                                <td>@course.NumberOfLectures</td>
+                                <td>@String.Format("{0: #,##0đ}", @course.CoursePrice)</td>
+                                <td>@String.Format("{0: #,##0đ}", @course.DiscountPrice)</td>
+                                <td>@course.Discount</td>
+                                <td>@course.Category.CategoryName</td>
+                                <td>@course.Introduction</td>
+                                <td>@course.Description</td>
+                                <td>
+                                    <a class="btn btn-info" href="@Url.Action("UpdateCourse","Course",new {ID = course.Id})">Sửa</a>
+                                    <a class="btn btn-danger" onclick="showConfirmation(@course.Id)">Xóa</a>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+
+<script> 
+    $(document).ready(function () {
+        $('#dataTabledata').DataTable();
+    });
+
+    function showConfirmation(id) {
+        var deleteUrl = '@Url.Action("DeleteCourse", "Course")';
+        var result = window.confirm("Bạn có chắc muốn xóa không?");
+
+        if (result) {
+            var urlWithId = deleteUrl + '?ID=' + id;
+            window.location.href = urlWithId;
+        }
+    }
+</script>

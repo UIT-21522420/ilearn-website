@@ -1,0 +1,72 @@
+﻿@model List<ILEARN.Models.Lecturer>
+@using ILEARN.Models;
+
+@{
+    ViewData["Title"] = "Xác nhận giảng viên";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header">Danh sách giảng viên chưa xác nhận</h1>
+                <table class="table table-bordered" id="lecturerTable" style="font-size: 12px">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên giảng viên</th>
+                            <th>Email</th>
+                            <th>Mật khẩu</th>
+                            <th>Trạng thái</th>
+                            <th>Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int i = 1;
+                            foreach (var l in Model)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@l.LecturerName</td>
+                                    <td>@l.Email</td>
+                                    <td>@l.Account.Password</td>
+                                    @{
+                                        var result = (@l.Account.UserStatus == 1) ? "Hoạt động" : "Không hoạt động";
+                                    }
+                                    <td>@result</td>
+                                    <td>
+                                        <a class="btn btn-info" href="@Url.Action("UpdateAccountStatus","Account",new {ID = l.Id})">Sửa</a>
+                                        <a class="btn btn-danger" onclick="showConfirmation(@l.Id)">Xóa</a>
+                                    </td>
+                                </tr>
+                                i++;
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#lecturerTable').DataTable();
+    })
+
+    function showConfirmation(id) {
+        var deleteUrl = '@Url.Action("DeleteAccount", "Account")';
+        var result = window.confirm("Bạn có chắc muốn xóa không?");
+
+        if (result) {
+            var urlWithId = deleteUrl + '?ID=' + id;
+            window.location.href = urlWithId;
+        }
+    }
+</script>
+

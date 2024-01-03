@@ -1,0 +1,104 @@
+﻿@model ILEARN.Models.Course
+
+@{
+    ViewData["Title"] = "UpdateCourse";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Sửa khóa học</h1>
+                <form action="@Url.Action("UpdateCurrentCourse","Course", new {ID = Model.Id}))" method="post">
+                    <input type="text" name="ID" value="@Model.Id" hidden />
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Tên khóa học <span style="color: red">*</span></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input class="input-style input-sm" type="text" name="name" placeholder="Nhập tên khóa học..." value="@Model.CourseName" required />
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Giá khóa học <span style="color: red">*</span></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input class="input-style input-sm" type="text" name="price" placeholder="Nhập giá..." value="@Model.CoursePrice" required />
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Giá sau giảm <span style="color: red">*</span></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input class="input-style input-sm" type="text" name="discountPrice" placeholder="Nhập giá..." value="@Model.DiscountPrice" required />
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Giảm giá <span style="color: red">*</span></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input class="input-style input-sm" type="number" name="discount" placeholder="Nhập phần trăm giảm giá(%)..." value="@Model.Discount" required />
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Số lượng bài giảng <span style="color: red">*</span></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input class="input-style input-sm" type="number" name="lecturesCount" placeholder="Nhập số lượng bài giảng..." value="@Model.NumberOfLectures" required />
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Giới thiệu</label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea name="introduction" class="input-sm textarea-style ml-2" cols="100" rows="16" placeholder="Nhập giới thiệu...">@Model.Introduction</textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Chú thích</label>
+                        </div>
+                        <div class="col-md-10">
+                            <textarea name="description" class="input-sm textarea-style ml-2" cols="100" rows="16" placeholder="Nhập chú thích...">@Model.Description</textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Giảng viên</label>
+                        </div>
+                        <div class="col-md-10">
+                            <select name="lecturerID" class="input-sm">
+                                @foreach (var gv in Common.GetLecturers())
+                                {
+                                    <option value="@gv.Id">@gv.LecturerName</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2" style="margin-bottom: 20px">
+                        <div class="col-md-2">
+                            <label class="label-style">Thể loại</label>
+                        </div>
+                        <div class="col-md-10">
+                            <select name="categoryID" class="input-sm">
+                                @foreach (var item in Common.GetCategories())
+                                {
+                                    <option value="@item.Id">@item.CategoryName</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <button class="btn btn-primary" type="submit">Xác nhận</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,41 @@
+﻿@model ILEARN.Models.Student
+
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="information-section minimal-border-full">
+    <div class="container">
+        <div style="height: 90px"> </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="info-first minimal-border-full mb-3">
+                    <img src="~/images/user.png" style="height: 300px; width: 300px" class="minimal-border-bottom"/>
+                    <div class="w-100">
+                        <p class="text-center"> Hello, @Model.Name.</>
+                    </div>
+                </div>
+                <button class="btn btn-info mb-3">Đổi ảnh đại diện</button>
+            </div>
+            <div class="col-md-9">
+                <h1 class="mb-4 text-center">Thông tin cá nhân</h1>
+                <div class="row mb-3">
+                    <label class="info-label">Họ và tên</label>
+                    <input class="info-input" name="username" type="text" value="@Model.Name"/>
+                </div>
+                <div class="row mb-3">
+                    <label class="info-label">Email</label>
+                    <input class="info-input" name="username" type="email" value="@Model.Email" />
+                </div>
+                <div class="row mb-3">
+                    <label class="info-label">Số điện thoại</label>
+                    <input class="info-input" name="username" type="text" value="@Model.Phone" />
+                </div>
+                <div class="d-flex justify-content-around mb-3">
+                    <button class="btn btn-primary">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,292 @@
+﻿@model List<ILEARN.Models.Course>
+@using ILEARN.Models
+
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<partial name="_Notification"/>
+
+<section id="home" style="height: 800px " class="w3l-banner py-5 minimal-border">
+    <div class="container pt-5 pb-md-4">
+        <div class="row align-items-center">
+            <div class="col-md-6 banner-left pt-md-0 pt-5">
+                <div class="mb-sm-4 mb-3">
+                    <h1 class="font-weight-bold text-black main-title">TRUNG TÂM ANH NGỮ ILEARN</h1><br>
+                    <span class="type-js">
+                        <span class="text-js text-black"> Chuyên đào tạo và luyện thi TOEIC từ 0 đến 900+ </span>
+                    </span>
+                </div>
+                <div class="mt-md-5 mt-4 mb-lg-0 mb-4">
+                    <a class="btn button-style" href="@Url.Action("Index", "Course")">Tham gia ngay</a>
+                </div>
+            </div>
+            <div class="col-md-6 banner-right mt-md-0 mt-4">
+                <img class="img-fluid" src="~/images/b1.png" alt=" ">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="inner-banner minimal-border" id="Intro">
+    <div class="mx-auto">
+        <div class="row d-flex align-items-center ">
+            <div class="div-img col col-6 text-right mt-3 mb-3">
+                <img src="~/images/about1.jpg" alt="Image" />
+            </div>
+            <div class="col col-6 text-left mt-3 mb-3">
+                <p class="div-text" style="font-size: 16px">
+                    <strong>BẠN MONG MUỐN CÓ BẰNG TOEIC NHƯNG....</strong>
+                    <br>
+                    ❌ Mất gốc, không biết bắt đầu từ đâu?
+                    <br>
+                    ❌ Không có lộ trình học tập rõ ràng?
+                    <br>
+                    ❌ Tự học mãi mà không hiệu quả?
+                    <br>
+                    ❌ Cần lộ trình cấp tốc để kịp thời ra trường?
+                    <br>
+                    ❌ Bạn đi làm và không có nhiều thời gian?
+                    <br>
+                    Chào đón bạn đến với:
+                    <br>
+                    <strong style="font-size: 20px">TRUNG TÂM ANH NGỮ ILEARN</strong>
+                    <br>
+                    Trung tâm Anh ngữ ILEARN chuyên đào tạo và luyện thi TOEIC, đội ngũ giảng viên trung tâm đã thiết kế chuỗi khóa học từ cơ bản đến nâng cao để <strong>giúp bất kỳ ai có mong muốn thi chứng chỉ TOEIC đều trở nên vô cùng đơn giản trong vòng từ 3-6 tháng</strong>.
+                    <br>
+                    Trong 3 năm qua, chúng tôi đã luyện thi cho hơn 2000 bạn sinh viên và người đi làm, giúp cho họ nâng cao chất lượng học tập trên trường và phát triển sự nghiệp.
+                    <br>
+                    Bạn đã sẵn sàng chinh phục mục tiêu TOEIC của mình?
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="feature-product-section minimal-border">
+    <div class="container-flush">
+        <div class="feature-show container pt-3">
+            <div class="feature-product-title p-4">
+                <h2 class="text-center"><bold>KHÓA HỌC NỀN TẢNG</bold></h2>
+            </div>
+            <div class="row justify-content-center">
+                @{
+                    foreach (Course j in Model)
+                    {
+                        if (j.CategoryId == 1)
+                        {
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
+                                <div class="course-item pb-2">
+                                    <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                        <div class="course-item-image">
+                                            <img src="~/images/@j.Img" alt="" class="minimal-border-bottom" />
+                                        </div>
+                                    </a>
+                                    <div class="course-item-detail">
+                                        <h3 class="title" style="min-height: unset">
+                                            <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                                <span class="ellipsis-2 course-name ml-3 mt-3" style="height: 42px">@j.CourseName</span>
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-md-6 col-sm-12 col-7 pr-0">
+                                            <div class="ellipsis-1 ml-3 mb-2">
+                                                <span>
+                                                    @Common.GetLecturerNameFromCourse(j)
+                                                </span>
+                                            </div>
+                                            <div class="rating_course rate_star_replace pull-left star_change ml-3">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="clearfix text-right">
+                                                <div class="price-col mr-2">
+                                                    <strike><span id="formatted-price">@String.Format("{0: #,##0đ}", j.CoursePrice)</span></strike>
+                                                    <br>
+                                                    <strong style="font-size: 22px"><span id="formatted-price">@String.Format("{0: #,##0đ}", j.DiscountPrice)</span></strong>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="container-flush">
+        <div class="feature-show container">
+            <div class="feature-product-title p-4">
+                <h2 class="text-center"><bold>BỘ CẢM NANG LUYỆN THI CẤP TỐC</bold></h2>
+            </div>
+            <div class="row justify-content-center">
+                @{
+                    foreach (Course j in Model)
+                    {
+                        if (@j.CategoryId == 2)
+                        {
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
+                                <div class="course-item pb-2">
+                                    <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                        <div class="course-item-image">
+                                            <img src="~/images/@j.Img" alt="" class="minimal-border-bottom" />
+                                        </div>
+                                    </a>
+                                    <div class="course-item-detail">
+                                        <h3 class="title" style="min-height: unset">
+                                            <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                                <span class="ellipsis-2 course-name ml-3 mt-3" style="height: 42px">@j.CourseName</span>
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-md-6 col-sm-12 col-7 pr-0">
+                                            <div class="ellipsis-1 ml-3 mb-2">
+                                                <span>
+                                                    @Common.GetLecturerNameFromCourse(j)
+                                                </span>
+                                            </div>
+                                            <div class="rating_course rate_star_replace pull-left star_change ml-3">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="clearfix text-right">
+                                                <div class="price-col mr-1">
+                                                    <strike><span id="formatted-price">@String.Format("{0: #,##0đ}", j.CoursePrice)</span></strike>
+                                                    <br>
+                                                    <strong style="font-size: 22px"><span id="formatted-price">@String.Format("{0: #,##0đ}", j.DiscountPrice)</span></strong>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="container-flush">
+        <div class="feature-show container pt-3 pb-3">
+            <div class="feature-product-title p-4">
+                <h2 class="text-center"><bold>KHÓA VIP - HỌC TRỰC TIẾP</bold></h2>
+            </div>
+            <div class="row justify-content-center">
+                @{
+                    foreach (Course j in Model)
+                    {
+                        if (@j.CategoryId == 3)
+                        {
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mt-3 mb-3">
+                                <div class="course-item">
+                                    <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                        <div class="course-item-image">
+                                            <img src="~/images/@j.Img" alt="" class="minimal-border-bottom"/>
+                                        </div>
+                                    </a>
+                                    <div class="course-item-detail">
+                                        <h3 class="title" style="min-height: unset">
+                                            <a href="@Url.Action("GetCourse","Cart",new {ID = j.Id})">
+                                                <span class="ellipsis-2 course-name ml-3 mt-3" style="height: 42px">@j.CourseName</span>
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-md-6 col-sm-12 col-7 pr-0">
+                                            <div class="ellipsis-1 ml-3 mb-2">
+                                                <span>
+                                                    @Common.GetLecturerNameFromCourse(j)
+                                                </span>
+                                            </div>
+                                            <div class="rating_course rate_star_replace pull-left star_change ml-3">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                <i class="fa fa-fw fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pl-0">
+                                            <div class="clearfix text-right">
+                                                <div class="price-col mr-2">
+                                                    <strike><span id="formatted-price">@String.Format("{0: #,##0đ}", j.CoursePrice)</span></strike>
+                                                    <br>
+                                                    <strong style="font-size: 22px"><span id="formatted-price">@String.Format("{0: #,##0đ}", j.DiscountPrice)</span></strong>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="reason-section minimal-border" style="background-color: #FBFBFB">
+    <div class="container justify-content-center pt-5 pb-5">
+        <h2 class="text-align-center p-5">4 LÍ DO NÊN CHỌN ILEARN</h2>
+        <div class="row">
+            <div class="reason-content col-3">
+                <div class="reason-img">
+                    <img src="~/images/reason1.jpg" class="minimal-border" alt="Image" />
+                </div>
+                <div class="reason-detail text-align-center pl-3 pr-3">
+                    <p style="font-size: 18px; color: black" class="pt-2 pb-2 font-weight-bolder">Cam kết đầu ra 100%</p>
+                    <p>Không chỉ dậy kiến thức, ILearn cam kết đồng hành cùng học viên cho tới khi đạt mục tiêu</p>
+                </div>
+            </div>
+            <div class="reason-content col-3">
+                <div class="reason-img">
+                    <img src="~/images/reason2.jpg" class="minimal-border" alt="Image" />
+                </div>
+                <div class="reason-detail text-align-center pl-3 pr-3">
+                    <p style="font-size: 18px; color: black" class="pt-2 pb-2 font-weight-bolder">Học cùng chuyên gia</p>
+                    <p>Đội ngũ giảng viên nhiệt huyết, năng động và đặc biệt là có trình độ chuyên môn cao</p>
+                </div>
+            </div>
+            <div class="reason-content col-3">
+                <div class="reason-img">
+                    <img src="../images/reason3.jpg" class="minimal-border" alt="Image" />
+                </div>
+                <div class="reason-detail text-align-center pl-3 pr-3">
+                    <p style="font-size: 18px; color: black" class="pt-2 pb-2 font-weight-bolder">Học mọi lúc, mọi nơi</p>
+                    <p>Chỉ cần laptop hoặc smartphone kết nối Internet, bạn có thể học qua Web và App mọi lúc, mọi nơi</p>
+                </div>
+            </div>
+            <div class="reason-content col-3">
+                <div class="reason-img">
+                    <img src="~/images/reason4.jpg" class="minimal-border" alt="Image" />
+                </div>
+                <div class="reason-detail text-align-center pl-3 pr-3">
+                    <p style="font-size: 18px; color: black" class="pt-2 pb-2 font-weight-bolder">Phương pháp độc quyền</p>
+                    <p>Phương pháp học ACTIVE LEARNING sẽ giúp bạn học tập ngay cả khi khoá học trực tiếp chưa bắt đầu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

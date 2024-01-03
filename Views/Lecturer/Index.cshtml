@@ -1,0 +1,94 @@
+﻿@using ILEARN.Models
+@model ILEARN.Models.Lecturer
+
+@{
+    ViewData["Title"] = "Giảng viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="lecturer-section" class="minimal-border-full">
+    <div style="height: 68px"> </div>
+    <div class="lecturer-banner">
+        <div class="container">
+            <div class="row">
+                <div class="container go-to-bottom">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="~/images/@Model.Img" class="rounded-circle minimal-border-full">
+                                </div>
+                                <div class="col-8 text-white">
+                                    <h2 class="font-weight-bolder">@Model.LecturerName</h2>
+                                    <p class="text-white">Giảng viên</p>
+                                    <div class="social-list">
+                                        <a class="social-button" href=""> <i class="fa fa-facebook-square"></i> Facebook </a>
+                                        <a class="social-button" href=""> <i class="fa fa-youtube"></i> Youtube </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="ul-lecturer-detail float-right">
+                                <ul>
+                                    <li>
+                                        <p class="text-white">@Common.GetCourseTeachedNumber(Model)</p>
+                                        <span>Khóa học</span>
+                                    </li>
+                                    <li>
+                                        <p class="text-white">0</p>
+                                        <span>Học viên</span>
+                                    </li>
+                                    <li>
+                                        <p class="text-white">0<i style="color: yellow" class="fa fa-star-o"></i></p>
+                                        <span>Đánh giá trung bình</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lecturer-detail minimal-border-bottom">
+        <div class="container mt-4 mb-4">
+            <h2 class="font-weight-bolder">Giới thiệu</h2>
+            <p class="pre-line mt-2">@Model.Description</p>
+        </div>
+    </div>
+    <div style="background: #F5F5F5" class="lecturer-relative-course pt-2 pb-2">
+        <div class="container mt-4 mb-4">
+            <h2 class="font-weight-bolder mb-4">Khóa học của giảng viên @Model.LecturerName</h2>
+            @{
+                foreach(Course j in Common.GetCourseTeachedByLecturer(Model))
+                {
+                    <div class="course-style minimal-border-full mt-2">
+                        <div class="img-course-style minimal-border-full">
+                            <a href="@Url.Action("GetCourse","Course", new {ID = j.Id})">
+                                <img src="~/images/@j.Img" alt="@j.CourseName">
+                            </a>
+                        </div>
+                        <div class="des-course-style">
+                            <p>
+                                <a href="@Url.Action("GetCourse","Course", new {ID = j.Id})" style="color: deepskyblue; font-weight: bold; font-size: 20px">@j.CourseName</a>
+                            </p>
+                            <ul class="d-inline-block text-black">
+                                <li><i class="fas fa-list"></i> @j.NumberOfLectures bài giảng</li>
+                                <li><i class="fa fa-clock-o"></i> 0</li>
+                            </ul>
+                            <p style="text-align: justify">@j.Introduction</p>
+                        </div>
+                        <div class="price-course-style">
+                            <span class="price-n">@String.Format("{0: #,##0đ}", j.CoursePrice)</span>
+                            <span class="price-t"><strike>@String.Format("{0: #,##0đ}", j.DiscountPrice)</strike></span>
+                            <span class="price-d">off @j.Discount%</span>
+                            <a class="minimal-border-full course-link-button" href="@Url.Action("GetCourse","Course", new {ID = j.Id})">CHI TIẾT</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,577 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ILEARN.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ILEARN.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\metisMenu.min.css",
+      "PackagePath": "staticwebassets\\css\\metisMenu.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\startmin.css",
+      "PackagePath": "staticwebassets\\css\\startmin.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\style-starter.css",
+      "PackagePath": "staticwebassets\\css\\style-starter.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\css\\toastr.css",
+      "PackagePath": "staticwebassets\\css\\toastr.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\datatable\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\datatable\\jquery.dataTables.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\datatable\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\datatable\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\30-ngay-gioi-ngu-phap-tieng-anh.jpg",
+      "PackagePath": "staticwebassets\\images\\30-ngay-gioi-ngu-phap-tieng-anh.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\about.jpg",
+      "PackagePath": "staticwebassets\\images\\about.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\about1.jpg",
+      "PackagePath": "staticwebassets\\images\\about1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\b1.png",
+      "PackagePath": "staticwebassets\\images\\b1.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\banner.png",
+      "PackagePath": "staticwebassets\\images\\banner.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\blog1.jpg",
+      "PackagePath": "staticwebassets\\images\\blog1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\blog2.jpg",
+      "PackagePath": "staticwebassets\\images\\blog2.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\blog3.jpg",
+      "PackagePath": "staticwebassets\\images\\blog3.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\book.png",
+      "PackagePath": "staticwebassets\\images\\book.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\book2.png",
+      "PackagePath": "staticwebassets\\images\\book2.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\c1.png",
+      "PackagePath": "staticwebassets\\images\\c1.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\c2.png",
+      "PackagePath": "staticwebassets\\images\\c2.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\c3.png",
+      "PackagePath": "staticwebassets\\images\\c3.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\c4.png",
+      "PackagePath": "staticwebassets\\images\\c4.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\c5.png",
+      "PackagePath": "staticwebassets\\images\\c5.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\c6.png",
+      "PackagePath": "staticwebassets\\images\\c6.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\design.png",
+      "PackagePath": "staticwebassets\\images\\design.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\ebook-2000-tu.jpg",
+      "PackagePath": "staticwebassets\\images\\ebook-2000-tu.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\history.png",
+      "PackagePath": "staticwebassets\\images\\history.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\img1.jpg",
+      "PackagePath": "staticwebassets\\images\\img1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\le-thi-thanh.jpg",
+      "PackagePath": "staticwebassets\\images\\le-thi-thanh.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\middle.png",
+      "PackagePath": "staticwebassets\\images\\middle.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\page-title-background.jpg",
+      "PackagePath": "staticwebassets\\images\\page-title-background.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\paint.png",
+      "PackagePath": "staticwebassets\\images\\paint.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\reason1.jpg",
+      "PackagePath": "staticwebassets\\images\\reason1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\reason2.jpg",
+      "PackagePath": "staticwebassets\\images\\reason2.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\reason3.jpg",
+      "PackagePath": "staticwebassets\\images\\reason3.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\reason4.jpg",
+      "PackagePath": "staticwebassets\\images\\reason4.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\stats1.png",
+      "PackagePath": "staticwebassets\\images\\stats1.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\stats2.png",
+      "PackagePath": "staticwebassets\\images\\stats2.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\stats3.png",
+      "PackagePath": "staticwebassets\\images\\stats3.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\stats4.png",
+      "PackagePath": "staticwebassets\\images\\stats4.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\team1.jpg",
+      "PackagePath": "staticwebassets\\images\\team1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\team2.jpg",
+      "PackagePath": "staticwebassets\\images\\team2.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\team3.jpg",
+      "PackagePath": "staticwebassets\\images\\team3.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\team4.jpg",
+      "PackagePath": "staticwebassets\\images\\team4.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\testi1.jpg",
+      "PackagePath": "staticwebassets\\images\\testi1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\testi2.jpg",
+      "PackagePath": "staticwebassets\\images\\testi2.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\testi3.jpg",
+      "PackagePath": "staticwebassets\\images\\testi3.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-canban.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-canban.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-caynen.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-caynen.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-chuyensau.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-chuyensau.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-part-1.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-part-1.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-part-2.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-part-2.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-part-3.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-part-3.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-part-4.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-part-4.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-part-5.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-part-5.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\toeic-part-7.jpg",
+      "PackagePath": "staticwebassets\\images\\toeic-part-7.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\images\\video.jpg",
+      "PackagePath": "staticwebassets\\images\\video.jpg"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\counter.js",
+      "PackagePath": "staticwebassets\\js\\counter.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\datatable_file.js",
+      "PackagePath": "staticwebassets\\js\\datatable_file.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\metisMenu.min.js",
+      "PackagePath": "staticwebassets\\js\\metisMenu.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\morris-data.js",
+      "PackagePath": "staticwebassets\\js\\morris-data.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\morris.min.js",
+      "PackagePath": "staticwebassets\\js\\morris.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\raphael.min.js",
+      "PackagePath": "staticwebassets\\js\\raphael.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\startmin.js",
+      "PackagePath": "staticwebassets\\js\\startmin.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\theme-change.js",
+      "PackagePath": "staticwebassets\\js\\theme-change.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\js\\toastr.js",
+      "PackagePath": "staticwebassets\\js\\toastr.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\video\\C2\\30-ngay-gioi-ngu-phap-tieng-anh_1.mp4",
+      "PackagePath": "staticwebassets\\video\\C2\\30-ngay-gioi-ngu-phap-tieng-anh_1.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ILEARN.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ILEARN.props",
+      "PackagePath": "build\\ILEARN.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ILEARN.props",
+      "PackagePath": "buildMultiTargeting\\ILEARN.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ILEARN.props",
+      "PackagePath": "buildTransitive\\ILEARN.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

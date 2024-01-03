@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Đăng ký dành cho giảng viên";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>@ViewData["Title"] - ILEARN</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/metisMenu.min.css" rel="stylesheet">
+    <link href="~/css/startmin.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Đăng ký dành cho giảng viên</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" method="post" action="@Url.Action("SignUpForLecturer","Authentication")">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nhập họ tên giảng viên..." name="name" type="text" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nhập email làm việc..." name="username" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nhập số điện thoại..." name="phone" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nhập mật khẩu..." name="password" type="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nhập lại mật khẩu..." name="password1" type="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <span>
+                                        @TempData["error"]
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-success btn-block">Sign Up</button>
+                                <br>
+                                <div class="form-group">
+                                    Bạn đã có tài khoản? <a href="@Url.Action("Signin","Authentication")">Đăng nhập</a>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/metisMenu.min.js"></script>
+    <script src="~/js/startmin.js"></script>
+</body>
+</html>

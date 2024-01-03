@@ -1,0 +1,66 @@
+﻿@model List<int>
+
+@{
+    ViewData["Title"] = "Khóa học đã đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="minimal-border-full mt-2">
+    <div style="height: 65px"> </div>
+    <div class="intro-banner minimal-border-bottom">
+        <div class="container">
+            <div class="row d-flex align-items-center" style="height: 100px">
+                @{
+                    if (Model != null)
+                    {
+                        <h2>Khóa học đã đăng ký (@Model.Count khóa học)</h2>
+                    } 
+                    else
+                    {
+                        <h2>Khóa học đã đăng ký (0 khóa học)</h2>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="cart-content" id="wrap-cart" style="background: #FBFBFB">
+        <div class="container">
+            <div class="row block-info-cart mb-3">
+                @if(Model != null)
+                {
+                    <div class="block-cart">
+                        <div class="row pb-3">
+                            <div class="col-md-12" id="cart-items-container">
+                                @foreach (var courseID in Model)
+                                {
+                                    var course = Common.GetCourseByID(courseID);
+                                    <div class="row course-box-cart pt-3 pb-3">
+                                        <div class="col-md-4">
+                                            <img src="~/images/@course.Img" class="minimal-border-full" />
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a href="@Url.Action("GetCourse","Cart",new {ID = @course.Id})" class="d-block text-black"><h3>@course.CourseName</h3></a>
+                                            <span class="d-block pt-2">Giảng viên: @Common.GetLecturerNameFromCourse(course)</span>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <a href="@Url.Action("Index","Course")" class="add-course"><i class="fa fa-plus"></i> Chọn thêm khóa học</a>
+                        </div>
+                    </div>
+                } 
+                else
+                {
+                    <div class="col-md-12">
+                        <div class="block-empty-cart text-center">
+                            <p class="mt-2 mb-5">Hiện tại bạn chưa đăng ký khóa học nào.<br>Vui lòng lựa chọn khóa học mà bạn muốn học.</p>
+                            <a href="@Url.Action("Index","Course")" class="button-style view-course-all">Xem danh sách khóa học</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

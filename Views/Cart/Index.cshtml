@@ -1,0 +1,84 @@
+﻿@using ILEARN.Models
+@using System.Security.Claims
+@model List<int>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<partial name="_Notification" />
+
+<div id="cart" class="minimal-border-full">
+    <div style="height: 65px"> </div>
+    <div class="intro-banner minimal-border-bottom">
+        <div class="container">
+            <div class="row d-flex align-items-center" style="height: 100px">
+                <h2>Giỏ hàng (<span class="items-count">@Model.Count</span> khóa học)</h2>
+            </div>
+        </div>
+    </div>
+    <div class="cart-content" id="wrap-cart" style="background: #FBFBFB">
+        <div class="container">
+            <div class="row block-info-cart">
+                @if (Model.Count > 0)
+                {
+                    <div class="block-cart">
+                        <div class="row pb-3">
+                            <div class="col-md-10 minimal-border-full" id="cart-items-container">
+                                @foreach (var courseID in Model)
+                                {
+                                    var course = Common.GetCourseByID(courseID);
+                                    <div class="row course-box-cart pt-3 pb-3">
+                                        <div class="col-md-2">
+                                            <img src="~/images/@course.Img" class="minimal-border-full" />
+                                        </div>
+                                        <div class="col-md-7">
+                                            <a href="" class="d-block text-black"><h3>@course.CourseName</h3></a>
+                                            <span class="d-block pt-2">Giảng viên: @Common.GetLecturerNameFromCourse(course)</span>
+                                        </div>
+                                        <div class="col-md-2 text-end">
+                                            <strike>@String.Format("{0: #,##0đ}", course.CoursePrice)</strike>
+                                            <br>
+                                            <strong style="font-size: 22px; color: red">@String.Format("{0: #,##0đ}", course.DiscountPrice)</strong>
+                                            <br>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="@Url.Action("RemoveFromCart","Cart",new{courseID=course.Id})" class="delete-btn">
+                                                <i class="fas fa-close"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-md-2 minimal-border-full">
+                                <div class="col pt-3">
+                                    <span class="text-black">Tổng cộng: </span><strong style="font-size: 22px; color: red">@String.Format("{0: #,##0đ}", Common.GetTotal(Model))</strong>
+                                </div>
+                                <div class="col d-flex justify-content-center pb-3">
+                                    @{
+                                        var accountid = int.Parse(User.FindFirst("ID").Value);
+                                    }
+                                    <a href="@Url.Action("Pay","Cart", new {cartList = Model, accountID = accountid})" class="buy-btn d-block mt-2 font-weight-bolder">THANH TOÁN</a>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <a href="@Url.Action("Index","Course")" class="add-course"><i class="fa fa-plus"></i> Chọn thêm khóa học</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-md-12">
+                        <div class="block-empty-cart text-center">
+                            <p class="mt-5"><i class="fas fa-7x fa-shopping-cart"></i></p>
+                            <p class="mt-2 mb-5">Hiện tại giỏ hàng của bạn chưa có khóa học nào.<br>Vui lòng lựa chọn khóa học mà bạn muốn học.</p>
+                            <a href="@Url.Action("Index","Course")" class="button-style view-course-all">Xem danh sách khóa học</a>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

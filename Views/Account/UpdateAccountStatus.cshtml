@@ -1,0 +1,24 @@
+﻿@model ILEARN.Models.Lecturer
+
+@{
+    ViewData["Title"] = "Cập nhật trạng thái tài khoản";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header">Cập nhật trạng thái</h1>
+                <form action="@Url.Action("UpdateAccountStatus","Account", new{ID = Model.Account.Id})" method="post">
+                    <select class="input-lg" name="status">
+                        <option value="false" selected>Chưa xác nhận</option>
+                        <option value="true">Xác nhận</option>
+                    </select>
+                    <button class="btn btn-info" type="submit">Sửa</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
