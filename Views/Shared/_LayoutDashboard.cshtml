@@ -114,7 +114,18 @@
                             </div>
                         </li>
                         <li>
-                            <a href="@Url.Action("CourseList","HomeLecturer", new {ID = int.Parse(User.FindFirst("id").Value)})" class="active"><i class="fas fa-dashboard fa-fw"></i> Quản lý khóa học</a>
+                            <a href="#" class="active"><i class="fas fa-dashboard fa-fw"></i> Quản lý khóa học</a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="@Url.Action("CourseList","Course")"><span class="fas fa-list"></span> Danh sách</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("AddCourse","Course")"><span class="fa fa-plus"></span> Thêm mới</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-book"></i> Thêm bài giảng</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="@Url.Action("ChangePassword","HomeLecturer")"><i class="fas fa-key"></i> Thay đổi mật khẩu</a>
@@ -169,22 +180,6 @@
                         </li>
                         <li>
                             <a href="@Url.Action("Decentralization","HomeAdmin")"><i class="fas fa-wrench fa-fw"></i> Phân quyền</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-sitemap fa-fw"></i> Template </a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#"> First Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#"> Second Level Item</a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#"> Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>

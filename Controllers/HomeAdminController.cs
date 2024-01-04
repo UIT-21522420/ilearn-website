@@ -31,46 +31,31 @@ namespace ILEARN.Controllers
         {
             using (IlearnDbContext db = new IlearnDbContext())
             {
-                // Retrieve accounts with role == 2 and include related Lecturer data
                 List<Lecturer> lecturers = db.Lecturers
                     .Include(l => l.Account)
                     .Where(l => l.Account.Role == 2)
                     .ToList();
 
-                // Retrieve all functions
-                List<FunctionT> functions = db.FunctionTs.ToList();
-
-                // Retrieve all decentralization records
+                List<FunctionT> functions = db.FunctionTs.Where(f => !f.FunctionName.Contains("Tài khoản:") && !f.FunctionName.Contains("Giảng viên:")).ToList();
                 List<Decentralization> decentralizations = db.Decentralizations.ToList();
-
-                // Create a list to hold the view models
                 List<DecentralizationViewModel> viewModelList = new List<DecentralizationViewModel>();
 
                 // Iterate through each lecturer
                 foreach (var lecturer in lecturers)
                 {
-                    // Create a new view model for the lecturer
                     var viewModel = new DecentralizationViewModel
                     {
                         AccountID = lecturer.AccountId,
                         LecturerName = lecturer.LecturerName
                     };
 
-                    // Iterate through each function
                     foreach (var function in functions)
                     {
-                        // Check if there is a decentralization record for the lecturer's account and function
                         var decentralization = decentralizations.FirstOrDefault(d => d.AccountId == lecturer.AccountId && d.FunctionId == function.Id);
-
-                        // Add the function ID and its permission status to the view model
                         viewModel.FunctionPermissions.Add(function.Id, decentralization != null);
                     }
-
-                    // Add the view model to the list
                     viewModelList.Add(viewModel);
                 }
-
-                // Return the view with the list of view models
                 return View(viewModelList);
             }
         }
@@ -103,6 +88,23 @@ namespace ILEARN.Controllers
             db.SaveChanges();
 
             return Ok();
+        }
+
+        [HttpPost]
+        public ActionResult Report(int year)
+        {
+            using IlearnDbContext db = new();
+            var data = db.ShoppingSessions
+                .Where(session => session.CreatedAt.Year == year)
+                .GroupBy(session => session.CreatedAt.Month)
+                .Select(group => new
+                {
+                    y = group.Key.ToString(),
+                    a = group.Sum(session => session.Total)
+                })
+                .ToList();
+
+            return Json(data);
         }
     }
 }

@@ -43,6 +43,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="@Url.Action("UserProfile","Home", new {ID = accountID})"><i class="fas fa-user fa-fw"></i> Thông tin cá nhân</a>
+                                    <a class="dropdown-item" href="@Url.Action("MyCourse","Course", new {ID = accountID})"><i class="fas fa-book fa-fw"></i> Khóa học của tôi</a>
                                     <a class="dropdown-item" href="@Url.Action("RegisteredCourses","Home", new {ID = accountID})"><i class="fas fa-list"></i> Lịch sử đăng ký khóa học</a>
                                     <a class="dropdown-item" href="#"><i class="fas fa-gear fa-fw"></i> Cài đặt</a>
                                     <div class="divider"></div>
@@ -230,7 +231,7 @@
             showLoadingOverlay();
             setTimeout(function () {
                 hideLoadingOverlay();
-            }, 2000);
+            }, 600);
         }
 
         window.onload = function () {

@@ -1,5 +1,6 @@
 ﻿using ILEARN.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Drawing.Printing;
 
@@ -43,7 +44,7 @@ namespace ILEARN.Controllers
             }
 
             using IlearnDbContext db = new();
-            var items = db.Lecturers.OrderBy(x => x.Id).ToList();
+            var items = db.Lecturers.Include(x => x.Account).Where(x => x.Account.Role == 2).OrderBy(x => x.Id).ToList();
             return View(items);
         }
 

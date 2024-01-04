@@ -189,5 +189,31 @@ namespace ILEARN.Controllers
             TempData["message"] = "Xóa thành công.";
             return RedirectToAction("CourseList");
         }
+
+        public IActionResult MyCourse(int ID)
+        {
+            using IlearnDbContext db = new();
+            var shoppingSession = db.ShoppingSessions.Where(m => m.AccountId == ID).ToList();
+            List<int> courseList = new List<int>();
+            if (shoppingSession != null)
+            {
+                foreach (var session in shoppingSession)
+                {
+                    var courses = db.Carts.Where(m => m.SessionId == session.Id)
+                                            .Select(m => m.CourseId)
+                                            .ToList();
+                    courseList.AddRange(courses);
+                }
+                return View(courseList);
+            }
+            return View();
+        }
+
+        public IActionResult LearnThroughVideo()
+        {
+            using IlearnDbContext db = new IlearnDbContext();
+            var videoList = db.Videos.ToList();
+            return View(videoList);
+        }
     }
 }

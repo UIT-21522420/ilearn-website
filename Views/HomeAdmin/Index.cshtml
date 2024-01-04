@@ -10,63 +10,75 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Thống kê doanh thu</h1>
-                <div class ="row">
+                <div class="row">
                     <div class="col-sm-6 text-center">
-                        <label class="label label-success">Doanh thu theo tháng</label>
+                        <label class="label label-success">Chọn tháng và năm:</label>
+                        <input type="text" id="selectedMonthYear" class="form-control">
+                        <br>
+                        <button id="updateChartBtn" class="btn btn-primary">Cập nhật biểu đồ</button>
+                        <br><br>
                         <div id="bar-chart"></div>
                     </div>
-                    <div class="col-sm-6 text-center">
-                        <label class="label label-success">Pie Chart</label>
-                        <div id="pie-chart"></div>
-                    </div>
-                </div>
-                <div class="row">
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="~/js/raphael.min.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
 <script type="text/javascript">
-    var data = [
-        { y: '2014', a: 50, b: 90 },
-        { y: '2015', a: 65, b: 75 },
-        { y: '2016', a: 50, b: 50 },
-        { y: '2017', a: 75, b: 60 },
-        { y: '2018', a: 80, b: 65 },
-        { y: '2019', a: 90, b: 70 },
-        { y: '2020', a: 100, b: 75 },
-        { y: '2021', a: 115, b: 75 },
-        { y: '2022', a: 120, b: 85 },
-        { y: '2023', a: 145, b: 85 },
-        { y: '2024', a: 160, b: 95 }
-    ],
-        config = {
-            data: data,
-            xkey: 'y',
-            ykeys: ['a'],
-            labels: ['Total Income', 'Total Outcome'],
-            fillOpacity: 0.6,
-            hideHover: 'auto',
-            behaveLikeLine: true,
-            resize: true,
-            pointFillColors: ['#ffffff'],
-            pointStrokeColors: ['black'],
-            lineColors: ['gray', 'red']
-        };
-    config.element = 'bar-chart';
-    Morris.Bar(config);
-    Morris.Donut({
-        element: 'pie-chart',
-        data: [
-            { label: "Friends", value: 30 },
-            { label: "Allies", value: 15 },
-            { label: "Enemies", value: 45 },
-            { label: "Neutral", value: 10 }
-        ]
-    });
+    jQuery(document).ready(function ($) {
+        $('#selectedMonthYear').datepicker({
+            changeMonth: false,
+            changeYear: true,
+            showButtonPanel: true,
+            dateFormat: 'yy', // Display format for month and year
+            onClose: function (dateText, inst) {
+                updateChart();
+            }
+        });
+
+        // Initial chart load with default selected month and year
+        updateChart();
+
+        // Update chart when the button is clicked
+        $('#updateChartBtn').click(function () {
+            updateChart();
+        });
+
+        function updateChart() {
+            var selectedYear = $('#selectedMonthYear').val();
+
+            $.ajax({
+                url: '@Url.Action("Report", "HomeAdmin")',
+                method: 'POST',
+                data: { year: selectedYear }, // Send the selected year to the server
+                success: function (data) {
+                    Morris.Bar({
+                        element: 'bar-chart',
+                        data: data,
+                        xkey: 'month', // Assuming 'month' is the property for the X-axis
+                        ykeys: ['total'],
+                        labels: ['Total Income'],
+                        fillOpacity: 0.6,
+                        hideHover: 'auto',
+                        behaveLikeLine: true,
+                        resize: true,
+                        pointFillColors: ['#ffffff'],
+                        pointStrokeColors: ['black'],
+                        barColors: ['#3498db'], // Adjust the color as needed
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    }); // Add this closing parenthesis
 </script>
 
