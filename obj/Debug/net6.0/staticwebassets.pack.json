@@ -553,6 +553,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\video\\C2\\1-second-video - Copy (2).mp4",
+      "PackagePath": "staticwebassets\\video\\C2\\1-second-video - Copy (2).mp4"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\video\\C2\\1-second-video - Copy (3).mp4",
+      "PackagePath": "staticwebassets\\video\\C2\\1-second-video - Copy (3).mp4"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\video\\C2\\1-second-video - Copy.mp4",
+      "PackagePath": "staticwebassets\\video\\C2\\1-second-video - Copy.mp4"
+    },
+    {
+      "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\video\\C2\\1-second-video.mp4",
+      "PackagePath": "staticwebassets\\video\\C2\\1-second-video.mp4"
+    },
+    {
       "Id": "E:\\C# Workplace\\WebsiteILearn\\ILEARN\\wwwroot\\video\\C2\\30-ngay-gioi-ngu-phap-tieng-anh_1.mp4",
       "PackagePath": "staticwebassets\\video\\C2\\30-ngay-gioi-ngu-phap-tieng-anh_1.mp4"
     },

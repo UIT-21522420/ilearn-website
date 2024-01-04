@@ -1,7 +1,39 @@
-﻿@{
+﻿@model List<ILEARN.Models.Video>
+@{
     ViewData["Title"] = "LearnThroughVideo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div id="intro-banner" class="minimal-border-full">
+    <div style="height: 100px">a</div>
+    <div class="container-fluid pb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="" id="content_courses">
+                    <h2 class="pb-3">Nội dung khóa học</h2>
+                    <ul>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <li class="video-title" data-video-url="../../video/C2/@Model[i].Link">Ngày @(i + 1): @Model[i].Title</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <video src="" id="video-box" controls></video>
+                <br />
+                <button class="btn btn-info">Mark as completed</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".video-title").click(function () {
+            var videoUrl = $(this).data("video-url");
+            $("#video-box").attr("src", videoUrl);
+        });
+    });
+</script>

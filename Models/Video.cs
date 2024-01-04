@@ -11,9 +11,7 @@ public partial class Video
 
     public string Link { get; set; } = null!;
 
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime? ModifiedAt { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
     public int CourseId { get; set; }
 

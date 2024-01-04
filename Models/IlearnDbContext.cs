@@ -242,6 +242,7 @@ public partial class IlearnDbContext : DbContext
 
             entity.HasOne(d => d.Account).WithMany(p => p.Students)
                 .HasForeignKey(d => d.AccountId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Student_Account");
         });
 
@@ -249,9 +250,7 @@ public partial class IlearnDbContext : DbContext
         {
             entity.ToTable("Video");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.CourseId).HasColumnName("courseID");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
@@ -259,9 +258,6 @@ public partial class IlearnDbContext : DbContext
             entity.Property(e => e.Link)
                 .HasMaxLength(50)
                 .HasColumnName("link");
-            entity.Property(e => e.ModifiedAt)
-                .HasColumnType("datetime")
-                .HasColumnName("modifiedAt");
             entity.Property(e => e.Subtitle)
                 .HasMaxLength(4000)
                 .HasColumnName("subtitle");

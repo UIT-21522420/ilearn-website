@@ -10606,3 +10606,16 @@ li:has(span.active-watching) {
         transform: rotate(360deg);
     }
 }
+
+.video-title
+{
+    width: 300px;
+    padding: 10px 30px;
+    border: 1px solid black;
+}
+
+#video-box 
+{
+    width: 800px;
+    height: 400px;
+}

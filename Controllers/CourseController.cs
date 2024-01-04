@@ -212,7 +212,7 @@ namespace ILEARN.Controllers
         public IActionResult LearnThroughVideo()
         {
             using IlearnDbContext db = new IlearnDbContext();
-            var videoList = db.Videos.ToList();
+            var videoList = db.Videos.Include(m=>m.Course).ToList();
             return View(videoList);
         }
     }
